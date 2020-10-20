@@ -2,12 +2,89 @@
 @import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
 @import url(./fontello.css);
 
+body *, body *::before, body *::after{
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
 body{
   font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-size: 1.4rem;
+  color: #181818;
 }
+
 
 /* 스킵 네비게이션 */
 
 .skip-nav {
   display: none;
 }
+
+/* 레이아웃*/
+.header, .visual, .main, .slogan {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.header {
+  background: yellow;
+  margin: 0 auto;
+}
+
+.visual {
+  background: lime;
+  height: 120px;
+}
+
+.main {
+  background: skyblue; 
+  overflow: hidden;
+  padding: 30px 15px;
+  min-height: 450px;
+}
+
+/* .clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+} */
+
+/* .clearfix {
+  clear: both;
+} */
+
+.group {
+  margin: 0 15px;
+  float: left;
+  height: auto;
+}
+
+
+.group1 {
+  background: pink;
+  width: 250px;
+
+}
+
+.group2 {
+  background:palevioletred;
+  width: 380px;
+}
+
+.group3 {
+  background: orange; 
+  width: 190px;
+
+}
+
+.slogan {
+  background: orange;
+}
+
+.footer {
+  background: pink;
+}
+
