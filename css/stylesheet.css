@@ -292,6 +292,16 @@ a {
   height: auto;
 }
 
+.login-container {
+  background-color: #fff;
+  margin: 10px;
+}
+
+.signin {
+
+}
+
+
 .group1 {
   background: pink;
   width: 250px;
