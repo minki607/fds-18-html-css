@@ -3,13 +3,16 @@
 @import url(./fontello.css);
 /* 숨김 제목 및 숨김 콘텐츠 */
 
-.a11y-hidden {
+.a11y-hidden, legend {
   margin: 0;
   position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
   clip-path: polygon(0 0, 0 0, 0 0);
+  clip: rect(0 0 0 0);
+  clip: rect(0,0,0,0);
+
 }
 
 body *, body *::before, body *::after {
@@ -292,18 +295,57 @@ a {
   height: auto;
 }
 
-.login-container {
-  background-color: #fff;
-  margin: 10px;
+.login{
+  background: radial-gradient(circle at right top, #e8852e, #ed552f);
+  background-color: #ed552f;
+  box-shadow: 8px 8px 0 gray;
+  border-radius: 5px;
+  padding: 8px;
+
 }
 
-.signin {
+.login-heading{
+  color: #ff0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 15px;
+  margin: 0;
+}
 
+.search-form {
+  background: #fff;
+  border-radius: 5px;
 }
 
 
+fieldset{
+  border: none;
+}
+
+legend {
+
+}
+
+.user-email label , .user-pw label {
+  display: inline-block;
+  width: 60px;
+}
+
+.user-email input, .user-pw input {
+  display:inline-block;
+  width: 100px;
+}
+
+.btn-login {
+  border: none;
+  background: tomato;
+  border-radius: 5px;
+  color: #fff;
+  padding: 20px 10px;
+  width: 60px;
+}
 .group1 {
-  background: pink;
+
   width: 250px;
 }
 
