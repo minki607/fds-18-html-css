@@ -1,8 +1,18 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 @import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
 @import url(./fontello.css);
+/* 숨김 제목 및 숨김 콘텐츠 */
 
-body *, body *::before, body *::after{
+.a11y-hidden {
+  margin: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+body *, body *::before, body *::after {
   box-sizing: border-box;
 }
 
@@ -10,17 +20,17 @@ html {
   font-size: 10px;
 }
 
-body{
+body {
   font-family: 'Spoqa Han Sans', 'Sans-serif';
   font-size: 1.4rem;
   color: #181818;
+  background: #ccc;
 }
 
-a{
+a {
   color: inherit;
   text-decoration: none
 }
-
 
 /* 스킵 네비게이션 */
 
@@ -29,13 +39,16 @@ a{
 }
 
 /* 레이아웃*/
+
 .header, .visual, .main, .slogan {
   width: 940px;
   margin: 0 auto;
 }
+
 /* 헤더 */
+
 .header {
-  background: yellow;
+  background: #fff;
   margin: 0 auto;
   position: relative;
   border-radius: 0 0 15px 15px;
@@ -43,17 +56,18 @@ a{
 }
 
 /* 로고 */
-.logo{
+
+.logo {
   position: absolute;
   top: 50px;
   left: 65px;
   margin: 0;
-
+  
 }
 
 /* 안내 링크 목록 */
 
-.member{
+.member {
   position: relative;
   padding-left: 0;
   list-style: none;
@@ -66,19 +80,163 @@ a{
   padding: 2px 0;
 }
 
-.member a{
+.member a {
   display: inline-block;
   padding: 6px 0;
-  background-color: pink;
+}
+
+.navigation {
+  padding-bottom: 30px;
+}
+
+.menu {
+  background: linear-gradient(to bottom, #efa22f 0%, #ed702d 35%, #ed702d 70%, #efa22f 100%);
+  margin: 10px 0 0 0;
+  padding-left: 0;
+  list-style: none;
+  height: 47px;
+  border-top: 2px solid currentColor;
+  border-radius: 0 0 5px 5px;
+  padding-left: 225px;
+  /* display: flex;
+  justify-content: flex-end;
+  align-items: center; */
+}
+
+.sub-menu {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: block;  
+  position: absolute;
+  top: 47px;
+  white-space: nowrap;
+}
+
+.menu-act .sub-menu {
+  display: block;
+}
+
+.sub-menu1,
+.sub-menu2,
+.sub-menu3 {
+  left: 0;
+}
+.sub-menu4,
+.sub-menu5,
+.sub-menu6 {
+  right: 0;
+}
+
+
+.sub-menu li{
+  display: inline-block;
+}
+
+.sub-menu li, 
+.sub-menu a{
+  display: inline-block;
+}
+
+.sub-menu a {
+  padding: 8px 0;
+  margin-right: 10px;
+}
+
+.sub-menu a::before{
+  content: "\f192";
+  font-family: 'fontello'; 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+}
+
+.sub-menu a:hover::before, .sub-menu a:focus::before {
+  content: "\e800";
+}
+
+.menu-act .submenu {
+  display: block;
+}
+
+
+.menu-item {
+  position: relative;
+  float: left;
+}
+
+.menu-button{
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 700;
+  background-color: transparent;
+  display: block;
+  line-height: 45px;
+  display: block;
+  padding: 0 20px;
+  border: none;
+  border-left: 2px solid rgba(255,255,255,.5);
+  text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+  /* border: none;
+  height: 45px;
+  padding: 0 15px;
+  cursor: pointer; */
+}
+
+
+ .menu-act > .menu-button  {
+  color: yellow;
+}
+
+.menu-act > .menu-button::after  {
+  content: '';
+  border-top: 2px solid #000;
+  display: block;
+  background: #000;
+  height: 2px;
+}
+
+/* 텍스트 및 배경 에니메이션 */
+
+/*텍스트 및 배경 애니메이션 - 비주얼*/
+
+@keyframes textAni {
+  0% {
+    font-size: 12px;
+    color: rgba(0,0,0,0);
+    transform: translate(0,0)
+   
+  }
+   
+  100%{
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+    transform: translate(400px,75px)
+    
+  }
 }
 
 .visual {
   background: lime;
   height: 120px;
+  border-top: 10px 10px solid transparent; 
+  position:relative; 
+}
+
+.visual-text{
+  margin: 0;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  animation-name: textAni;
+  animation-duration: 3000ms;
+  animation-fill-mode: forwards;
+  position: absolute;
+  width: 500px;
 }
 
 .main {
-  background: skyblue; 
+  background: skyblue;
   overflow: hidden;
   padding: 30px 15px;
   min-height: 450px;
@@ -98,24 +256,21 @@ a{
   margin: 0 15px;
   float: left;
   height: auto;
-  
 }
 
 .group1 {
   background: pink;
   width: 250px;
-
 }
 
 .group2 {
-  background:palevioletred;
+  background: palevioletred;
   width: 380px;
 }
 
 .group3 {
-  background: orange; 
+  background: orange;
   width: 190px;
-
 }
 
 .slogan {
@@ -125,4 +280,3 @@ a{
 .footer {
   background: pink;
 }
-
