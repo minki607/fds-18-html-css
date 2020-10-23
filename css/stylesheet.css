@@ -275,6 +275,7 @@ a {
   overflow: hidden;
   padding: 30px 15px;
   min-height: 450px;
+  background-color: #fff; 
 }
 
 /* .clearfix::after {
@@ -314,8 +315,9 @@ a {
   font-size: 1.6rem;
   font-weight: 700; 
   text-indent: 10px;
-  
+ 
 }
+
 
 .login-form{
   margin-top: 10px;
@@ -395,9 +397,35 @@ a {
 }
 
 .group2 {
-
   width: 380px;
 }
+
+/*Validation*/
+
+.validation-list{
+  margin: 25px 0px;
+  padding-left: 0;
+}
+.validation-list li{
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+.validation-list a{
+  display: block;
+  background: url("images/validation_icon.png") no-repeat 15px 50%,
+              linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 30px;
+  padding: 5px 5px 5px 35px;
+}
+.validation-list a:hover, 
+.validation-list a:focus{
+  color: #f00;
+  outline: 0;
+}
+
+/*웹 표준 관련용어*/
+
 
 .group3 {
   width: 190px;
