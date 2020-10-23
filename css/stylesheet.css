@@ -150,7 +150,6 @@ a {
   content: "\f192";
   font-family: 'fontello'; 
   display: inline-block;
-  text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
 }
@@ -273,7 +272,6 @@ a {
 }
 
 .main {
-  background: skyblue;
   overflow: hidden;
   padding: 30px 15px;
   min-height: 450px;
@@ -295,67 +293,113 @@ a {
   height: auto;
 }
 
+/*로그인*/
+
 .login{
   background: radial-gradient(circle at right top, #e8852e, #ed552f);
   background-color: #ed552f;
-  box-shadow: 8px 8px 0 gray;
   border-radius: 5px;
-  padding: 8px;
+  box-shadow: 5px 5px 0 0 #ccc; 
+  padding: 15px 10px;
+
+  /* box-shadow: 8px 8px 0 gray;
+  border-radius: 5px;
+  padding: 8px; */
 
 }
 
 .login-heading{
   color: #ff0;
-  font-size: 1.5rem;
-  font-weight: 700;
-  padding: 15px;
   margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700; 
+  text-indent: 10px;
+  
 }
 
-.search-form {
+.login-form{
+  margin-top: 10px;
+  padding: 10px 10px 0 10px;
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+
+}
+
+.login-form fieldset{
+  border: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  margin: 0;
+  border-bottom: 1px solid #000;
+  position: relative;
+}
+
+.login-member{
   background: #fff;
-  border-radius: 5px;
+  padding: 2px 10px;
+  margin: 0;
+  list-style: none;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  letter-spacing: -1px;
+  justify-content: space-between;
 }
 
-
-fieldset{
-  border: none;
+.login-member li{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 }
 
-legend {
-
+.login-member a{
+  display: block;
+  padding: 8px 0;
 }
 
-.user-email label , .user-pw label {
+.login-member .icon-right-open {
+  color: #ed702d;
+}
+
+.user-email, .user-pw{
+  margin-bottom: 5px;
+}
+
+.login-form label {
+  width: 4em;
   display: inline-block;
-  width: 60px;
+}
+.login-form input{
+  width: 90px;
+  height: 22px;
+  border: 1px solid #ccc;
+  padding: 1px 1px 1px 0.5em;
+  
 }
 
-.user-email input, .user-pw input {
-  display:inline-block;
-  width: 100px;
-}
-
-.btn-login {
-  border: none;
-  background: tomato;
-  border-radius: 5px;
+.btn-login{
+  width: 50px;
+  height: 50px;
+  padding: 0 5px;
+  border: 0;
+  border-radius: 3px;
+  background: #ed702d;
   color: #fff;
-  padding: 20px 10px;
-  width: 60px;
+  position:absolute;
+  top: 0;
+  right: 0;
 }
-.group1 {
 
+.group1 {
   width: 250px;
 }
 
 .group2 {
-  background: palevioletred;
+
   width: 380px;
 }
 
 .group3 {
-  background: orange;
   width: 190px;
 }
 
