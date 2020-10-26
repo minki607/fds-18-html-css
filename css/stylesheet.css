@@ -424,7 +424,62 @@ a {
   outline: 0;
 }
 
+
 /*웹 표준 관련용어*/
+
+
+.term {
+  background: linear-gradient(to bottom, #ccc, #eee);
+  padding: 15px;
+  border: 1px solid #aaa;
+  border-radius: 5px;  
+ }
+
+ .term-heading{
+   margin-top: 0;
+   margin-bottom:0;
+   font-size: 1.6rem;
+   font-weight: 700;
+ }
+
+ .term-list > div {
+  overflow: hidden;
+}
+
+.term-list > div:nth-child(2) {
+  margin-top: 15px;
+}
+.term-list-subject,
+.term-list-brief {
+
+  float: right;
+  width: 145px;
+}
+
+.term-list-subject{
+  color: #296897;
+}
+.term-list-thumbnail {
+  float: left;
+}
+.term-list-thumbnail img {
+  display: block;
+}
+.term-list-brief {
+  margin-top: 5px;
+  line-height: 1.5;
+}
+.term-list dd {
+  margin-left: 0;
+}
+.term-list > div:nth-child(even) .term-list-subject,
+.term-list > div:nth-child(even) .term-list-brief {
+  float: left;
+}
+.term-list > div:nth-child(even) .term-list-thumbnail {
+  float: right;
+}
+
 
 
 .group3 {
