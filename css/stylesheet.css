@@ -563,10 +563,10 @@ a {
 /*공지사항 및 자료실*/
 
 .board {
-  background: yellow;
+  
   position: relative;
-  height: 200px;
-  margin-top: 20px;
+  min-height: 200px;
+  margin-top: 20px; 
 }
 
 .notice-list,
@@ -593,11 +593,21 @@ a {
 }
 
 
+.notice-heading {
+  left: 0;
+}
+.pds-heading{
+  left: 83px;
+  
+}
+
 
 .tab {
-  float: left;
+  /* float: left; */
   margin-bottom:0;
   margin-top:0;
+  position: absolute;
+  top: 0;
 }
 
 .tab a{
@@ -608,7 +618,12 @@ a {
   color: #999;
   font-size: 1.4rem;
   font-weight: 400;
-  padding: 5px 10px;
+  padding: 5px 15px;
+}
+
+
+.is-active .tab {
+  z-index: 5;  
 }
 
 .is-active .tab a{
@@ -623,10 +638,9 @@ a {
   list-style-type: none;
   padding-left: 0;
   margin: 0; 
-  background-color: skyblue;
-  position: absolute;
-  left: 0;
-  top:45px;
+  padding-top: 45px;
+  min-height: 170px;
+
 }
 
 .notice-list li ,
