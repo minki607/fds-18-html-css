@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html lang="ko-KR">
 
 <head>
@@ -281,7 +281,6 @@
           </ul>
           <a href="#" class="notice-more icon-plus" aria-labelledby="noticeHeading" title="공지사항"> 더보기</a>
         </section>
-
         <section class="pds">
           <h2 class="pds-heading tab" id="pdsHeading">
             <a href="#" role="button">자료실</a>
@@ -311,8 +310,31 @@
           <a href="#" class="pds-more icon-plus" aria-labelledby="pdsHeading" title="자료실"> 더보기</a>
         </section>
       </div>
+
       <section class="news">
-        <h2 class="news-heading">새소식</h2>
+        <h2 class="news-heading" id="newsHeading">새소식</h2>
+        <article class="news-article">
+          <a class="news-article-link" href="#">
+            <h3 class="news-article-subject">
+              W3C 사이트가 리뉴얼 되었습니다
+            </h3>
+            <time datetime="2020-10-28T14:19:07" class="news-article-date">2020.10.28</time>
+            <p class="news-article-brief">
+                디자인 및 다양한 view 환경을 고려하여 구성되어 있으며, 
+                기존보다 최신 정보 및 개발자를 위한 기술 가이드도 
+                찾기 쉽도록 구성되어 있습니다.
+            </p>
+            <figure class="news-article-thumbnail">
+              <img src="./images/news.gif" alt="" aria-labelledby="newsArticleThumbnail">
+              <figcaption id="newsArticleThumbnail">
+                W3C 리뉴얼
+              </figcaption>
+            </figure>
+          </a>
+        </article>
+        <a href="#" class="icon-plus news-more"
+        title="새소식" aria-labelledby="newsHeading">더 보기</a> 
+
       </section>
     </div>
     <div class="group group3">group3</div>
