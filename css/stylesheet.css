@@ -690,16 +690,18 @@ a {
   margin-top: 35px;
 }
 
-.news-more {
+.news-more{
   position: absolute;
   top: -8px;
   right: -8px;
   padding: 8px;
 }
 
-.news-more::before{
+.news-more::before,
+{
   color: hsla(110, 50%, 30%, 1);
 }
+
 .news-article-link{
   display: grid;
   grid-template-columns: 130px 1fr;
@@ -758,7 +760,7 @@ a {
 .related {
   padding-top: 10px;
 }
-.event-heading, .related-heading{
+.event-heading, .related-heading, .favorite-heading{
 
   margin: 0;
   font-size: 1.6rem;
@@ -828,6 +830,89 @@ a {
 .related-list:hover{
   height: 147px;
   padding: 10px 0;
+}
+
+/*인기 사이트*/
+
+.favorite {
+  margin-top: 20px;
+  position: relative;
+}
+.favorite-list {
+  margin: 10px 0 0 0;
+  padding-left: 0;
+  list-style:none;
+  overflow: hidden;
+}
+
+.favorite-list li {
+  margin-top: 8px;
+  counter-increment: rank;
+  position: relative;
+  /* display: flex;
+  flex-flow: row nowrap;
+  align-items: center; */
+  
+}
+
+.favorite-list li:before {
+  content: counter(rank);
+  color: #fff;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 2px 5px;
+  margin-right: 5px;
+  background-color: #999;
+  border-radius: 2px; 
+  position: absolute;
+
+
+}
+
+.favorite-list a {
+  /* background-color: cyan;
+  margin-right: 5px;
+  flex-grow: 1; */
+  display: block;
+  margin: 0 25px;
+  
+  
+}
+
+.up, .down, .stop {
+  font-style:normal;
+  width: 9px;
+  height: 11px;
+  overflow: hidden;
+  padding-top: 11px;
+  background-image: url(./images/rank.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+
+}
+
+.up {
+  background-position: 0 0;
+}
+.down {
+  background-position: 0 50%
+}
+
+.stop{
+  background-position: 0 100%;
+}
+
+.favorite-more {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 8px
+}
+.favorite-more::before {
+  color: hsla(110, 50%, 30%, 1);
 }
 
 
