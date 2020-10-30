@@ -27,7 +27,8 @@ body {
   font-family: 'Spoqa Han Sans', 'Sans-serif';
   font-size: 1.4rem;
   color: #181818;
-  background: #ccc;
+  background: url(./images/bg_flower.png) no-repeat 50% 0, linear-gradient(#ccc 0%, #eee 35%, #fff 60%, #fff 100%);
+
 }
 
 a {
@@ -37,13 +38,27 @@ a {
 
 /* 스킵 네비게이션 */
 
-.skip-nav {
-  display: none;
+.skip-nav a {
+  position: absolute;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 0;
+  overflow: hidden;
+}
+
+.skip-nav a:focus {
+  height: auto;
+  padding: 10px 0;
 }
 
 /* 레이아웃*/
 
-.header, .visual, .main, .slogan {
+.header, .visual, .main, .slogan, .footer-inner {
   width: 940px;
   margin: 0 auto;
 }
@@ -276,6 +291,7 @@ a {
   padding: 30px 15px;
   min-height: 450px;
   background-color: #fff; 
+  border-radius: 15px 15px 0 0;
 }
 
 /* .clearfix::after {
@@ -324,6 +340,7 @@ a {
   padding: 10px 10px 0 10px;
   background-color: #fff;
   border-radius: 5px 5px 0 0;
+  margin-bottom: 0;
 
 }
 
@@ -697,7 +714,7 @@ a {
   padding: 8px;
 }
 
-.news-more::before,
+.news-more::before
 {
   color: hsla(110, 50%, 30%, 1);
 }
@@ -917,9 +934,110 @@ a {
 
 
 .slogan {
-  background: orange;
+  position: relative;
+  padding: 0 70px 15px 180px;
+
 }
 
+.slogan-heading{
+  height: 83px; 
+  width: 110px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 83px;
+  overflow: hidden;
+  position: absolute;
+  left: 35px;
+  bottom: -35px;
+}
+
+.slogan-heading::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(./images/coffee.png) no-repeat 0 0;
+}
+
+.slogan-brief{
+  color: #a09784;
+  margin: 0;
+  
+}
+
+.slogan-brief q::before {
+  font-size: 3.5rem;
+  position: relative;
+  top: 10;
+}
+
+.slogan-brief q::after{
+  content: "";
+}
+
+
 .footer {
-  background: pink;
+  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 60%, #fff 100%);
+}
+
+.footer-inner{
+  padding: 15px 100px 15px 180px;
+  position: relative;
+}
+
+/*footer 로고*/
+
+.footer-logo{
+  position: absolute;
+  top: 35px;
+  left: 35px;
+}
+
+/*가이드 링크 목록*/
+.guide-list{
+  margin: 0;
+  padding: 2px 0 0 39px;
+  list-style-type: none;
+  background: #7b8385;
+  color: #fff;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.guide-list li {
+  float:left;
+  margin: 0 5px;
+}
+
+.guide-list a{
+  display:block;
+  padding: 8px 10px;
+  text-transform: uppercase;
+}
+
+/*주소 및 저작권 */
+
+.address {
+  font-style: normal;
+  margin: 10px 0 5px;
+}
+
+.address span {
+  margin-right: 15px;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  margin-top: 15px;
+  display: block;
+}
+/*HTML 5 & CSS3 로고*/
+.badge{
+  position: absolute;
+  top: 15px;
+  right: 0;
+  
 }
